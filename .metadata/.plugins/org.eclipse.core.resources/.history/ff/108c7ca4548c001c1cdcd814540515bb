@@ -1,0 +1,33 @@
+package entities;
+
+public class RentService {
+	
+	RentInvoice invoice = new RentInvoice();
+
+	public RentInvoice rent(Movie movie, String type) {
+		
+		invoice.setReturnDate(movie.getReturnDate());
+		movie.setStock(movie.getStock()-1);
+		validateStockIsNotEmpty(movie);
+		validateTypeAndApplyBusinessRules(movie, type);			
+
+		return invoice;
+	}
+	
+	public void validateStockIsNotEmpty(Movie movie) {
+		if (movie.getStock() == 0)
+			throw new RuntimeException("sem estoque");
+	}
+	
+	public void validateTypeAndApplyBusinessRules(Movie movie, String type) {
+		if (type.equalsIgnoreCase("extended warranty")) {
+			invoice.setPrice(movie.getPrice()*2);
+			invoice.setReturnDate(movie.getReturnDate().plusDays(3));
+		}
+		else {
+			invoice.setPrice(movie.getPrice());
+			invoice.setReturnDate(movie.getReturnDate().plusDays(1));
+		}
+	}
+		
+}

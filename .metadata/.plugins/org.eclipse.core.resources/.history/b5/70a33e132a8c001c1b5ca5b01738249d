@@ -1,0 +1,12 @@
+package entities;
+
+public class Movie {
+	
+	private int stock;
+
+	public void setStock(int arg1) {
+		this.stock = arg1;
+		
+	}
+
+}

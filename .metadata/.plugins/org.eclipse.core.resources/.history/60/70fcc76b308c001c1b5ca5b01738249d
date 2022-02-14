@@ -1,0 +1,12 @@
+package entities;
+
+public class RentService {
+	
+	
+
+	public NotaAluguel rent(Movie movie) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

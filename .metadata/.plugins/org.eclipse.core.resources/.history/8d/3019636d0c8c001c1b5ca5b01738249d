@@ -1,0 +1,54 @@
+package StepDefinitions;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class RegexChallengeSteps {
+	
+	String ticket;
+	
+	@Given("^the ticket ( especial)? is A.(\\d{3})$")
+	public void theTicketIs(String type, String arg1) {
+	
+	}
+
+	@Given("^the ticket price is R\\$ (\\d+),(\\d+)$")
+	public void the_ticket_price_is_R$(int real, int cents) {
+
+	}
+
+	@Given("^the passenger name is \"(.*)\"$")
+	public void the_passenger_name_is(String string) {
+
+	}
+
+	@Given("^the passenger's cellphone number is (\\d+)-(\\d+)$")
+	public void the_passenger_s_cellphone_number_is(Integer int1, Integer int2) {
+
+	}
+
+	@When("^I create the steps$")
+	public void i_create_the_steps() {
+
+	}
+
+	@Then("^the test will pass$")
+	public void the_test_will_pass() {
+
+	}
+
+	@Given("the ticket is AB{int}")
+	public void the_ticket_is_AB(Integer int1) {
+	}
+
+	@Given("the special ticket is AB{int}")
+	public void the_special_ticket_is_AB(Integer int1) {
+	}
+
+	@Given("the passengers cellphone number is {int}{int}")
+	public void the_passengers_cellphone_number_is(Integer int1, Integer int2) {
+
+	}
+
+}

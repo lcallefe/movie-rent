@@ -1,0 +1,67 @@
+package steps;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.Date;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import entities.Movie;
+import entities.RentInvoice;
+import entities.RentService;
+
+public class MovieRentSteps {
+	
+	private Movie movie;
+	private RentService rent = new RentService();
+	private RentInvoice invoice;
+	private Date currentDate = new Date();
+	
+	@Given("^a movie stock with (\\d+) units$")
+	public void aMovieStockWithUnits(int arg1) throws Throwable {
+		movie = new Movie();
+		movie.setStock(arg1);
+		
+	}
+
+	@Given("^the rent price is R\\$(\\d+)$")
+	public void theRentPriceIs(Double arg1) throws Throwable {
+		movie.setPrice(arg1);
+	}
+
+	@When("^I rent one of the movies$")
+	public void rentOneMovie() throws Throwable {
+		invoice = rent.rent(movie);
+		
+	}
+
+	@Then("^the rent price will be R\\$(\\d+)$")
+	public void rentPrice(Double arg1) throws Throwable {
+		assertEquals(arg1, invoice.getPrice());
+	}
+
+	@Then("^the return date will be in the following day$")
+	public void returnDate() throws Throwable {
+		assertEquals(currentDate.compareTo(invoice.getReturnDate()), -1);
+		
+	}
+
+	@Then("^the stock will have a balance of (\\d+)$")
+	public void stockWillHaveABalanceOf(int arg1) throws Throwable {
+		assertEquals(arg1, rent.returnStock(movie));
+	}
+	
+	@Then("^it will not be possible because theres no stock$")
+	public void it_will_not_be_possible_because_theres_no_stock() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^the stock balance is (\\d+)$")
+	public void the_stock_balance_is(int arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+}

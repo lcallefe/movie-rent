@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="CucumberJava" tests="17" started="17" failures="0" errors="0" ignored="0">
+  <testsuite name="runners.TestRunner" time="0.02">
+    <testsuite name="Feature:" time="0.02">
+      <testsuite name="Scenario: Sucessful movie rent" time="0.005">
+        <testcase name="Given a movie stock with 2 units" classname="Scenario: Sucessful movie rent" time="0.0"/>
+        <testcase name="And the rent price is R$3" classname="Scenario: Sucessful movie rent" time="0.0"/>
+        <testcase name="When I rent one of the movies" classname="Scenario: Sucessful movie rent" time="0.0"/>
+        <testcase name="Then the rent price will be R$3" classname="Scenario: Sucessful movie rent" time="0.0"/>
+        <testcase name="And the return date will be in the following day" classname="Scenario: Sucessful movie rent" time="0.0"/>
+        <testcase name="And the stock will have a balance of 1" classname="Scenario: Sucessful movie rent" time="0.0"/>
+      </testsuite>
+      <testsuite name="Scenario: Movie rent when theres no stock" time="0.004">
+        <testcase name="Given a movie stock with 0 units" classname="Scenario: Movie rent when theres no stock" time="0.0"/>
+        <testcase name="When I rent one of the movies" classname="Scenario: Movie rent when theres no stock" time="0.0"/>
+        <testcase name="Then it will not be possible because theres no stock" classname="Scenario: Movie rent when theres no stock" time="0.001"/>
+        <testcase name="And the stock will have a balance of 0" classname="Scenario: Movie rent when theres no stock" time="0.001"/>
+      </testsuite>
+      <testsuite name="Scenario: Special conditions to extended warranty" time="0.005">
+        <testcase name="Given a movie stock with 2 units" classname="Scenario: Special conditions to extended warranty" time="0.0"/>
+        <testcase name="And the rent price is R$4" classname="Scenario: Special conditions to extended warranty" time="0.0"/>
+        <testcase name="And the rent type is extended warranty" classname="Scenario: Special conditions to extended warranty" time="0.0"/>
+        <testcase name="When I rent one of the movies" classname="Scenario: Special conditions to extended warranty" time="0.0"/>
+        <testcase name="Then the rent price will be R$8" classname="Scenario: Special conditions to extended warranty" time="0.0"/>
+        <testcase name="And the return date will be in 3 days" classname="Scenario: Special conditions to extended warranty" time="0.0"/>
+        <testcase name="And the points earned will be equal to 2" classname="Scenario: Special conditions to extended warranty" time="0.001"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

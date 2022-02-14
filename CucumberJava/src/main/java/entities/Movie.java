@@ -5,6 +5,7 @@ public class Movie {
 	
 	private int stock;
 	private Double price;
+	private String type;
 
 	
 	public void setStock(int arg1) {
@@ -24,6 +25,13 @@ public class Movie {
 	public Double getPrice() {
 		return price;
 	}
+
+	public String getType() {
+		return type;
+	}
 	
+	public void setType(String type) {
+		this.type = type;
+	}
 
 }

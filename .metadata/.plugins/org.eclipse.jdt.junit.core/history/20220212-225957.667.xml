@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="CucumberJava" tests="22" started="21" failures="0" errors="2" ignored="2">
+  <testsuite name="runners.TestRunner" time="0.063">
+    <testsuite name="Feature:" time="0.063">
+      <testsuite name="Scenario: Sucessful movie rent" time="0.001" incomplete="true">
+        <error>java.lang.NullPointerException
+	at steps.MovieRentSteps.rentPrice(MovieRentSteps.java:71)
+	at ✽.Then the rent price will be R$3(./src/test/resources/Features/movie_rent.feature:11)
+
+</error>
+        <testcase name="Given a movie" classname="Scenario: Sucessful movie rent" time="0.0"/>
+        <testcase name="When I rent one of the movies" classname="Scenario: Sucessful movie rent" time="0.0"/>
+        <testcase name="Then the rent price will be R$3" classname="Scenario: Sucessful movie rent" time="0.001">
+          <error>java.lang.NullPointerException
+	at steps.MovieRentSteps.rentPrice(MovieRentSteps.java:71)
+	at ✽.Then the rent price will be R$3(./src/test/resources/Features/movie_rent.feature:11)
+
+</error>
+        </testcase>
+        <testcase name="And the return date will be in the following day" classname="Scenario: Sucessful movie rent" time="0.0" ignored="true"/>
+        <testcase name="And the stock will have a balance of 1" classname="Scenario: Sucessful movie rent" time="0.0" ignored="true"/>
+      </testsuite>
+      <testcase name="Scenario Outline: Movie rent when theres no stock" classname="Scenario Outline: Movie rent when theres no stock" incomplete="true"/>
+      <testsuite name="Scenario Outline: Special conditions to extended warranty" time="0.005">
+        <testsuite name="Examples:" time="0.005">
+          <testsuite name="| 4 | extended | 8 | 3 | 2 |" time="0.0">
+            <testcase name="Given a movie stock with 2 units" classname="| 4 | extended | 8 | 3 | 2 |" time="0.0"/>
+            <testcase name="And the rent price is R$4" classname="| 4 | extended | 8 | 3 | 2 |" time="0.0"/>
+            <testcase name="And the rent type is extended" classname="| 4 | extended | 8 | 3 | 2 |" time="0.0"/>
+            <testcase name="When I rent one of the movies" classname="| 4 | extended | 8 | 3 | 2 |" time="0.0"/>
+            <testcase name="Then the rent price will be R$8" classname="| 4 | extended | 8 | 3 | 2 |" time="0.0"/>
+            <testcase name="And the return date will be in 3 days" classname="| 4 | extended | 8 | 3 | 2 |" time="0.0"/>
+            <testcase name="And the points earned will be equal to 2" classname="| 4 | extended | 8 | 3 | 2 |" time="0.0"/>
+            <testcase name="And the stock will have a balance of 1" classname="| 4 | extended | 8 | 3 | 2 |" time="0.0"/>
+          </testsuite>
+          <testsuite name="| 4 | normal | 4 | 1 | 1 |" time="0.004">
+            <testcase name="Given a movie stock with 2 units" classname="| 4 | normal | 4 | 1 | 1 |" time="0.0"/>
+            <testcase name="And the rent price is R$4" classname="| 4 | normal | 4 | 1 | 1 |" time="0.0"/>
+            <testcase name="And the rent type is normal" classname="| 4 | normal | 4 | 1 | 1 |" time="0.0"/>
+            <testcase name="When I rent one of the movies" classname="| 4 | normal | 4 | 1 | 1 |" time="0.0"/>
+            <testcase name="Then the rent price will be R$4" classname="| 4 | normal | 4 | 1 | 1 |" time="0.0"/>
+            <testcase name="And the return date will be in 1 days" classname="| 4 | normal | 4 | 1 | 1 |" time="0.0"/>
+            <testcase name="And the points earned will be equal to 1" classname="| 4 | normal | 4 | 1 | 1 |" time="0.0"/>
+            <testcase name="And the stock will have a balance of 1" classname="| 4 | normal | 4 | 1 | 1 |" time="0.0"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

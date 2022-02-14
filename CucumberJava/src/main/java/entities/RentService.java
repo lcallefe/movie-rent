@@ -7,7 +7,7 @@ public class RentService {
 	RentInvoice invoice = new RentInvoice();
 	LocalDateTime currentDate = LocalDateTime.now();
 
-	public RentInvoice rent(Movie movie, String type) {
+	public RentInvoice rent(Movie movie, RentType type) {
 		validateStockIsNotEmpty(movie);
 		validateTypeAndApplyBusinessRules(movie, type);	
 		movie.setStock(movie.getStock()-1);
@@ -19,15 +19,18 @@ public class RentService {
 			throw new RuntimeException("no stock");
 	}
 	
-	public void validateTypeAndApplyBusinessRules(Movie movie, String type) {
-		if (type.equalsIgnoreCase("extended warranty")) {
-			invoice.setPrice(movie.getPrice()*2);
-			invoice.setReturnDate(currentDate.plusDays(3));
-		}
-		else {
+	public void validateTypeAndApplyBusinessRules(Movie movie, RentType type) {
+		switch (type) {
+		case NORMAL:
 			invoice.setPrice(movie.getPrice());
 			invoice.setReturnDate(currentDate.plusDays(1));
+		break;
+		case EXTENDED:
+			invoice.setPrice(movie.getPrice()*2);
+			invoice.setReturnDate(currentDate.plusDays(3));
+		break;
 		}
+
 	}
 		
 }

@@ -1,0 +1,37 @@
+package entities;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class Movie {
+	
+	private int stock;
+	private Double price;
+	private Date returnDate;
+	
+	public Date getReturnDate (Date currentDate) {
+		Calendar c = Calendar.getInstance();
+		c.setTime(currentDate);
+		c.add(Calendar.YEAR, 1);
+	    c.add(Calendar.MONTH, 1);
+	    c.add(Calendar.DATE, 1);
+	    returnDate = c.getTime();
+	    return returnDate;
+	}
+	
+	public void setStock(int arg1) {
+		this.stock = arg1;
+		
+	}
+
+	public void setPrice(Double arg1) {
+		this.price = arg1;
+		
+	}
+
+	public Double getRent() {
+		return price;
+	}
+
+
+}

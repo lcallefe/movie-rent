@@ -1,0 +1,10 @@
+package entities;
+
+public class RentService {
+	
+	public RentInvoice rent(Movie movie) {
+		RentInvoice invoice = new RentInvoice();
+		return invoice;
+	}
+
+}

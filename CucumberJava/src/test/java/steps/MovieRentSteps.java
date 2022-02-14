@@ -4,13 +4,16 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.time.LocalDateTime;
+import java.util.Map;
 
+import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import entities.Movie;
 import entities.RentInvoice;
 import entities.RentService;
+import entities.RentType;
 
 public class MovieRentSteps {
 	
@@ -18,9 +21,18 @@ public class MovieRentSteps {
 	private RentService rent = new RentService();
 	private RentInvoice invoice;
 	private String error;
-	private String rentType;
+	private RentType rentType = RentType.NORMAL;
 	private LocalDateTime currentDate = LocalDateTime.now();
 
+	@Given("^a movie$")
+	public void a_movie(DataTable table) throws Throwable {
+		Map<String, String> map = table.asMap(String.class, String.class);
+		movie = new Movie();
+		movie.setStock(Integer.parseInt(map.get("stock")));
+		String type = map.get("type");
+		movie.setPrice(Double.parseDouble(map.get("price")));
+		rentType = type.equals("normal") ? RentType.NORMAL : RentType.EXTENDED;
+	}
 	
 	@Given("^a movie stock with (\\d+) units$")
 	public void aMovieStockWithUnits(int arg1) throws Throwable {
@@ -31,13 +43,16 @@ public class MovieRentSteps {
 
 	@Given("^the rent price is R\\$(\\d+)$")
 	public void theRentPriceIs(Double arg1) throws Throwable {
-		rentType = "normal";
 		movie.setPrice(arg1);
 	}
 	
-	@Given("^the rent type is extended warranty$")
-	public void the_rent_type_is_extended_warranty() throws Throwable {
-	    rentType = "extended warranty";
+	@Given("^the rent type is extended$")
+	public void the_rent_type_is_extended() throws Throwable {
+	    rentType = RentType.EXTENDED;
+	}
+	
+	@Given("^the rent type is normal$")
+	public void the_rent_type_is_normal() throws Throwable {
 	}
 
 	@When("^I rent one of the movies$")

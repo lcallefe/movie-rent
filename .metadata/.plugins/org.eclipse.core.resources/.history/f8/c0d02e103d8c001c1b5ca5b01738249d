@@ -1,0 +1,28 @@
+package entities;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class RentInvoice {
+	private Double price;
+	private Date returnDate;
+
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+	
+	public Date getReturnDate (Date currentDate) {
+		Calendar c = Calendar.getInstance();
+		c.setTime(currentDate);
+		c.add(Calendar.YEAR, 1);
+	    c.add(Calendar.MONTH, 1);
+	    c.add(Calendar.DATE, 1);
+	    returnDate = c.getTime();
+	    return returnDate;
+	}
+
+}

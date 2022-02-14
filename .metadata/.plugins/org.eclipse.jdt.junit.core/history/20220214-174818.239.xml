@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="CucumberJava" tests="30" started="30" failures="0" errors="0" ignored="9">
+  <testsuite name="runners.TestRunner" time="8.974">
+    <testsuite name="Funcionalidade: Contas" time="8.974">
+      <testsuite name="Esquema do Cenário: Deve validar regras cadastro contas" time="8.974">
+        <testsuite name="Exemplos:" time="8.974">
+          <testsuite name="| Conta de teste | Conta adicionada com sucesso! |" time="1.433" incomplete="true">
+            <skipped/>
+            <testcase name="Dado que estou acessando a aplicação" classname="| Conta de teste | Conta adicionada com sucesso! |" time="0.001"/>
+            <testcase name="Quando informo o usuário &quot;a@a&quot;" classname="| Conta de teste | Conta adicionada com sucesso! |" time="0.0"/>
+            <testcase name="E a senha &quot;a&quot;" classname="| Conta de teste | Conta adicionada com sucesso! |" time="0.0"/>
+            <testcase name="E seleciono entrar" classname="| Conta de teste | Conta adicionada com sucesso! |" time="0.0"/>
+            <testcase name="Então visualizo a página inicial" classname="| Conta de teste | Conta adicionada com sucesso! |" time="0.0"/>
+            <testcase name="Quando seleciono Contas" classname="| Conta de teste | Conta adicionada com sucesso! |" time="0.0"/>
+            <testcase name="E seleciono Adicionar" classname="| Conta de teste | Conta adicionada com sucesso! |" time="0.0"/>
+            <testcase name="Quando informo a conta Conta de teste" classname="| Conta de teste | Conta adicionada com sucesso! |" time="0.0" ignored="true"/>
+            <testcase name="E seleciono Salvar" classname="| Conta de teste | Conta adicionada com sucesso! |" time="0.0" ignored="true"/>
+            <testcase name="Então recebo a mensagem &quot;Conta adicionada com sucesso!&quot;" classname="| Conta de teste | Conta adicionada com sucesso! |" time="0.0" ignored="true"/>
+          </testsuite>
+          <testsuite name="|  | Informe o nome da conta |" time="1.339" incomplete="true">
+            <skipped/>
+            <testcase name="Dado que estou acessando a aplicação" classname="|  | Informe o nome da conta |" time="0.0"/>
+            <testcase name="Quando informo o usuário &quot;a@a&quot;" classname="|  | Informe o nome da conta |" time="0.0"/>
+            <testcase name="E a senha &quot;a&quot;" classname="|  | Informe o nome da conta |" time="0.0"/>
+            <testcase name="E seleciono entrar" classname="|  | Informe o nome da conta |" time="0.001"/>
+            <testcase name="Então visualizo a página inicial" classname="|  | Informe o nome da conta |" time="0.0"/>
+            <testcase name="Quando seleciono Contas" classname="|  | Informe o nome da conta |" time="0.0"/>
+            <testcase name="E seleciono Adicionar" classname="|  | Informe o nome da conta |" time="0.0"/>
+            <testcase name="Quando informo a conta " classname="|  | Informe o nome da conta |" time="0.0" ignored="true"/>
+            <testcase name="E seleciono Salvar" classname="|  | Informe o nome da conta |" time="0.0" ignored="true"/>
+            <testcase name="Então recebo a mensagem &quot;Informe o nome da conta&quot;" classname="|  | Informe o nome da conta |" time="0.0" ignored="true"/>
+          </testsuite>
+          <testsuite name="| Conta mesmo nome | Já existe uma conta com esse nome! |" time="1.338" incomplete="true">
+            <skipped/>
+            <testcase name="Dado que estou acessando a aplicação" classname="| Conta mesmo nome | Já existe uma conta com esse nome! |" time="0.0"/>
+            <testcase name="Quando informo o usuário &quot;a@a&quot;" classname="| Conta mesmo nome | Já existe uma conta com esse nome! |" time="0.0"/>
+            <testcase name="E a senha &quot;a&quot;" classname="| Conta mesmo nome | Já existe uma conta com esse nome! |" time="0.0"/>
+            <testcase name="E seleciono entrar" classname="| Conta mesmo nome | Já existe uma conta com esse nome! |" time="0.0"/>
+            <testcase name="Então visualizo a página inicial" classname="| Conta mesmo nome | Já existe uma conta com esse nome! |" time="0.0"/>
+            <testcase name="Quando seleciono Contas" classname="| Conta mesmo nome | Já existe uma conta com esse nome! |" time="0.0"/>
+            <testcase name="E seleciono Adicionar" classname="| Conta mesmo nome | Já existe uma conta com esse nome! |" time="0.0"/>
+            <testcase name="Quando informo a conta Conta mesmo nome" classname="| Conta mesmo nome | Já existe uma conta com esse nome! |" time="0.0" ignored="true"/>
+            <testcase name="E seleciono Salvar" classname="| Conta mesmo nome | Já existe uma conta com esse nome! |" time="0.0" ignored="true"/>
+            <testcase name="Então recebo a mensagem &quot;Já existe uma conta com esse nome!&quot;" classname="| Conta mesmo nome | Já existe uma conta com esse nome! |" time="0.0" ignored="true"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

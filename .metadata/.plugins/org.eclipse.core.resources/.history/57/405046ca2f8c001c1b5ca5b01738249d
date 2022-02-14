@@ -1,0 +1,44 @@
+package steps;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import entities.Movie;
+import entities.RentService;
+
+public class MovieRentSteps {
+	
+	private Movie movie;
+	private RentService rent;
+	
+	@Given("^a movie stock with (\\d+) units$")
+	public void aMovieStockWithUnits(int arg1) throws Throwable {
+		movie = new Movie();
+		movie.setStock(arg1);
+		
+	}
+
+	@Given("^the rent price is R\\$(\\d+)$")
+	public void theRentPriceIs(Double arg1) throws Throwable {
+		movie.setPrice(arg1);
+	}
+
+	@When("^I rent one of the movies$")
+	public void rentOneMovie() throws Throwable {
+		rent.rent(movie);
+		
+	}
+
+	@Then("^the rent price is R\\$(\\d+)$")
+	public void rentPrice(int arg1) throws Throwable {
+	}
+
+	@Then("^the return date will be in the following day$")
+	public void returnDate() throws Throwable {
+	}
+
+	@Then("^the stock will have a balance of (\\d+)$")
+	public void stockWillHaveABalanceOf(int arg1) throws Throwable {
+	}
+
+}

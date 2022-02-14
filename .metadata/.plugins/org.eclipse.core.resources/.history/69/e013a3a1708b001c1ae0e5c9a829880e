@@ -1,0 +1,14 @@
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features="src/test/resources/Features",
+glue= {"StepDefinitions"})
+		
+		)
+public class TestRunner {
+	
+	monochrome = true;
+	
+	plugin = {"pretty", "html:target/reports"}
+	plugin = {"pretty", "json:target/reports/cucumber.json"} 
+
+}
